@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/icons8-programmer-96.png">
     <title>Hi here's my website</title>
 </head>
 <style>
+
+    html { 
+        scroll-behavior: smooth; 
+    }
+
     :root {
         --backgroundColor: #D5EBDA;
+        --primary-text: gray;
     }
 
     body {
         font-family: Arial, Helvetica, sans-serif;
         background-color: var(--backgroundColor);
         box-sizing: border-box;
+        color: var(--primary-text);
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        background-color: var(--backgroundColor);
     }
 
     ul {
@@ -27,33 +45,61 @@
 
     a {
         padding: 1.0rem 1.5rem;
+        font-weight: bold;
+        color: var(--primary-text);
+        text-decoration: none;
     }
 
     a:hover {
         background-color: white;
+        color: black;
     }
 
     #intro-sentence {
         margin-top: 10rem;
         margin-left: 30rem;
+        z-index: -1000;
 
+    }
+
+    #section-home {
+        padding-top: 10rem;
+        height: 100vh;
+        width: 100vw;
     }
 
 </style>
 <body>
     <nav>
         <ul>
-        <li><a>Home</a></li>
-        <li><a>Tech</a></li>
-        <li><a>Social</a></li>
-        <li><a>Contact</a></li>
+        <li><a href="#section-home">Home</a></li>
+        <li><a href="#section-tech">Tech</a></li>
+        <li><a href="#section-social">Social</a></li>
+        <li><a href="#section-contact">Contact</a></li>
         </ul>
     </nav>
     
     <main>
-        <div id="intro-sentence">
+        <section id="section-home">
+            <div id="intro-sentence">
             <h3>Hi, I'm James Chamberlain -- an enthusiastic software solution provider.</h3>
-        </div>
+            </div>
+        </section>
+        
+
+
+        <section id="section-tech">
+            <p>Hi I'm the body section</p>
+        </section>
+
+        <section id="section-social">
+            <p>Hi I'm the body section</p>
+        </section>
+
+        <section id="section-contact">
+            <p>Hi I'm the body section</p>
+        </section>
+
     </main>
         
 </body>
