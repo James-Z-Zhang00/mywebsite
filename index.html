@@ -8,22 +8,45 @@
 </head>
 <style>
 
+    /* 
+    
+    Page color setting
+
+    #F3F3E0
+
+    #133E87
+
+    #608BC1
+
+    #CBDCEB
+    
+    */
+
     html { 
         scroll-behavior: smooth; 
     }
 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     :root {
-        --backgroundColor: #D5EBDA;
-        --primary-text: gray;
+        /* --home-section-background-color: #D5EBDA; */
+        --home-section-background-color: #F3F3E0;
+        --home-section-color: gray;
+        --tech-section-background-color: #133E87;
+        --tech-section-color: white;
+        --social-section-background-color: #608BC1;
+        --social-section-color: yellow;
+        --contact-section-background-color: #CBDCEB;
+        --contact-section-color: orange;
     }
 
     body {
         font-family: Arial, Helvetica, sans-serif;
-        background-color: var(--backgroundColor);
-        box-sizing: border-box;
-        color: var(--primary-text);
-        margin: 0;
-        padding: 0;
+        color: var(--home-section-color);
     }
 
     nav {
@@ -31,42 +54,69 @@
         position: fixed;
         top: 0;
         z-index: 1000;
-        background-color: var(--backgroundColor);
+        background-color: var(--home-section-background-color);
     }
 
-    ul {
+    nav ul {
         display: flex;
     }
 
-    li {
-        margin: 2.0rem;
+    nav li {
         list-style-type: none;
+        padding: 1.5rem 2.5rem;
     }
 
-    a {
-        padding: 1.0rem 1.5rem;
+    nav a {
         font-weight: bold;
-        color: var(--primary-text);
+        color: var(--home-section-color);
         text-decoration: none;
     }
-
-    a:hover {
+    
+    nav ul li:hover {
         background-color: white;
         color: black;
     }
 
+    /* nav a:hover {
+        background-color: white;
+        color: black;
+    } */
+
+    .sections {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
     #intro-sentence {
         margin-top: 10rem;
-        margin-left: 30rem;
+        margin-left: 20rem;
         z-index: -1000;
 
     }
 
     #section-home {
         padding-top: 10rem;
-        height: 100vh;
-        width: 100vw;
+        background-color: var(--home-section-background-color);
+        color: var(--home-section-color);
     }
+
+    #section-tech {
+        background-color: var(--tech-section-background-color);
+        color: var(--tech-section-color);
+    }
+
+    #section-social {
+        background-color: var(--social-section-background-color);
+        color: var(--social-section-color);
+    }
+
+    #section-contact {
+        background-color: var(--contact-section-background-color);
+        color: var(--contact-section-color);
+    }
+
 
 </style>
 <body>
@@ -80,24 +130,47 @@
     </nav>
     
     <main>
-        <section id="section-home">
+        <section class="sections" id="section-home">
             <div id="intro-sentence">
             <h3>Hi, I'm James Chamberlain -- an enthusiastic software solution provider.</h3>
             </div>
         </section>
-        
-
-
-        <section id="section-tech">
-            <p>Hi I'm the body section</p>
+        <section class="sections" id="section-tech">
+            <ul>
+                <li>Full Stack</li>
+                <li>AI & Machine Learning</li>
+                <li>Embedded</li>
+            </ul>
         </section>
-
-        <section id="section-social">
-            <p>Hi I'm the body section</p>
+        <section class="sections" id="section-social">
+            <ul>
+                <li>freeCodeCamp</li>
+                <li>American Red Cross</li>
+                <li>Thanksgiving List</li>
+            </ul>
         </section>
-
-        <section id="section-contact">
-            <p>Hi I'm the body section</p>
+        <section class="sections" id="section-contact">
+            <form action="">
+                <h2>Contact Me</h2>
+                <form action="your-server-endpoint" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+            </form>
         </section>
 
     </main>
