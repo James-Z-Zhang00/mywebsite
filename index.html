@@ -5,174 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/icons8-programmer-96.png">
     <title>Hi here's my website</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: powderblue;
+        }
+
+        a {
+            color: blue;
+        }
+
+        section {
+            margin-left: 50px;
+        }
+
+        section:first-child {
+            margin-top: 70px;
+        }
+    </style>
 </head>
-<style>
-
-    /* 
-    
-    Page color setting
-
-    #F3F3E0
-
-    #133E87
-
-    #608BC1
-
-    #CBDCEB
-    
-    */
-
-    html { 
-        scroll-behavior: smooth; 
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    :root {
-        /* --home-section-background-color: #D5EBDA; */
-        --home-section-background-color: #F3F3E0;
-        --home-section-color: gray;
-        --tech-section-background-color: #133E87;
-        --tech-section-color: white;
-        --social-section-background-color: #608BC1;
-        --social-section-color: yellow;
-        --contact-section-background-color: #CBDCEB;
-        --contact-section-color: orange;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        color: var(--home-section-color);
-    }
-
-    nav {
-        width: 100%;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-        background-color: var(--home-section-background-color);
-    }
-
-    nav ul {
-        display: flex;
-    }
-
-    nav li {
-        list-style-type: none;
-        padding: 1.5rem 2.5rem;
-    }
-
-    nav a {
-        font-weight: bold;
-        color: var(--home-section-color);
-        text-decoration: none;
-    }
-    
-    nav ul li:hover {
-        background-color: white;
-        color: black;
-    }
-
-    /* nav a:hover {
-        background-color: white;
-        color: black;
-    } */
-
-    .sections {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding-top: 5rem;
-    }
-
-    #intro-sentence {
-        margin-top: 10rem;
-        margin-left: 20rem;
-        z-index: -1000;
-
-    }
-
-    #section-home {
-        background-color: var(--home-section-background-color);
-        color: var(--home-section-color);
-    }
-
-    #section-tech {
-        background-color: var(--tech-section-background-color);
-        color: var(--tech-section-color);
-    }
-
-    #section-social {
-        background-color: var(--social-section-background-color);
-        color: var(--social-section-color);
-    }
-
-    #section-contact {
-        background-color: var(--contact-section-background-color);
-        color: var(--contact-section-color);
-    }
-
-
-</style>
 <body>
-    <nav>
-        <ul>
-        <a href="#section-home"><li>Home</li></a>
-        <a href="#section-tech"><li>Tech</li></a>
-        <a href="#section-social"><li>Social</li></a>
-        <a href="#section-contact"><li>Contact</li></a>
-        </ul>
-    </nav>
-    
-    <main>
-        <section class="sections" id="section-home">
-            <div id="intro-sentence">
-            <h3>Hi, I'm James Chamberlain -- an enthusiastic software solution provider.</h3>
-            </div>
-        </section>
-        <section class="sections" id="section-tech">
-            <ul>
-                <li>Full Stack</li>
-                <li>AI & Machine Learning</li>
-                <li>Embedded</li>
-            </ul>
-        </section>
-        <section class="sections" id="section-social">
-            <ul>
-                <li>freeCodeCamp</li>
-                <li>American Red Cross</li>
-                <li>Thanksgiving List</li>
-            </ul>
-        </section>
-        <section class="sections" id="section-contact">
-            <form action="">
-                <h2>Contact Me</h2>
-                <form action="your-server-endpoint" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-            </form>
-        </section>
 
-    </main>
-        
+    <section>
+        <h1>Hi, my name is James -- a software solution provider based in Boston, MA</h1>
+    </section>
+
+    <section>
+        <h3><a href="mailto:james.z.zhang00@gmail.com">james.z.zhang00@gmail.com</a></h3>
+        <h3>Pronouns: he/him</h3>
+    </section>
+
+    <section>
+        My current fields:
+        <ol>
+            <li>Front end UI development & design: React, CSS, SASS</li>
+            <li>Backend server development: RESTful API, Express, Django, Flask</li>
+            <li>Large open-source projects contribution</li>
+        </ol>
+    </section>
+
+    <section>
+        Feel free to check out my <a href="">LinkedIn</a> and <a href="">GitHub</a> 
+    </section>
+
+    <section>
+        My projects of the year
+    </section>
+    
 </body>
 </html>
