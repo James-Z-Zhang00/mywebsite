@@ -20,11 +20,31 @@
 
         section {
             margin-left: 50px;
+            margin-top: 20px;
         }
 
         section:first-child {
             margin-top: 70px;
         }
+
+        .showcase {
+            margin-top: 20px;
+        }
+
+        .cardview {
+            background-color: aliceblue;
+            width: 30%;
+            display: inline-block;
+            border: solid 1px yellowgreen;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .cardview > img {
+            margin-top: 20px;
+            width: 300px;
+        }
+
     </style>
 </head>
 <body>
@@ -34,8 +54,7 @@
     </section>
 
     <section>
-        <h3><a href="mailto:james.z.zhang00@gmail.com">james.z.zhang00@gmail.com</a></h3>
-        <h3>Pronouns: he/him</h3>
+        <h3><a href="mailto:james.z.zhang00@gmail.com">james.z.zhang00@gmail.com</a> Pronouns: he/him</h3>
     </section>
 
     <section>
@@ -48,11 +67,26 @@
     </section>
 
     <section>
-        Feel free to check out my <a href="">LinkedIn</a> and <a href="">GitHub</a> 
+        Feel free to check out my <a href="https://www.linkedin.com/in/james-z-zhang00/" target="_blank">LinkedIn</a> and <a href="https://github.com/James-Z-Zhang00" target="_blank">GitHub</a> 
     </section>
 
     <section>
-        My projects of the year
+        Projects of the Year
+        <div class="showcase">
+            <div class="cardview">
+                <img src="./images/webImage.png" alt="the web image sample picture">
+                <p>The personal website project</p>
+            </div>
+            <div class="cardview">
+                <img src="./images/freeCodeCamp.png" alt="the freeCodeCamp sample picture">
+                <p>freeCodeCamp</p>
+            </div>
+            <div class="cardview">
+                <img src="./images/flutter.png" alt="the flutter sample picture">
+                <p>Google flutter</p>
+            </div>
+        </div>
+        
     </section>
     
 </body>
